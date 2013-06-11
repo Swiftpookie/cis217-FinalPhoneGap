@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Erick's First Mobile Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+</head>
+
+<body data-erick="red">
+<!--first page-->
+
+<div data-role="page" id="homepage">
+
+    <header></header>
+    <div data-role="header" data-id="navbar" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#homepage" class="ui-btn-active ui-state-persist">Contact Us</a></li>
+                <li><a href="#secondpage">Menu</a></li>
+                <li><a href="#thirdpage">Order</a></li>
+                <li><a href="#about_us">About Us</a></li>
+                <li><a href="#map">Map</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="content">
+
+        <p>
+            Contact Us<br/>
+
+            <a href="tel:555-555-5555" data-role="button"> Order our Pizza by Phone: 555-555-5555 </a>
+            <a href="sms://555-555-5555?body=hello%20dave" data-role="button"> Order our Pizza Now via Text Message </a>
+            <a href="mailto:erickhernandez.130@gmail.com?subject=Hello%20Dave&body=what%20are%20you%20doing"
+               data-role="button"> Order Pizza Now by Email </a>
+        </p>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        Copyright Erick Hernandez
+    </div>
+
+</div>
+
+<div data-role="page" id="secondpage">
+    <!--second page-->
+
+    <header><img src=""></header>
+    <div data-role="header" data-id="navbar" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#homepage">Contact Us</a></li>
+                <li><a href="#secondpage" class="ui-btn-active ui-state-persist">Menu</a></li>
+                <li><a href="#thirdpage">Order</a></li>
+                <li><a href="#about_us">About Us</a></li>
+                <li><a href="#map">Map</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="content">
+
+        <ul data-role="listview" data-inset="true" data-native--menu="false" data-filter="true"
+            data-filter-placeholder="Search...">
+            <div data-role="collapsible">
+                <h3>Pizza Toppings</h3>
+
+                <form id="top" data-role="controlgroup" data-collapsed="false">
+                    <fieldset data-role="controlgroup">
+                        <label><input type="checkbox" name="Peppers  " value="Peppers " data-theme="a">Peppers extra
+                            $.50</label>
+                        <label><input type="checkbox" name="Jalapenos  " value="male" data-theme="a">Jalapenos extra
+                            $.25</label>
+                        <label><input type="checkbox" name="Onions " value="male" data-theme="a">Onions extra
+                            $.50</label>
+                        <label><input type="checkbox" name="Sausage " value="male" data-theme="a">Sausage extra
+                            $1.00</label>
+                        <label><input type="checkbox" name="Canadian Bacon " value="male" data-theme="a">Canadian Bacon
+                            extra $1.00</label>
+                        <label><input type="checkbox" name="Bacon " value="male" data-theme="a">Bacon extra
+                            $1.00</label>
+                        <label><input type="checkbox" name="Chicken " value="male" data-theme="a">Chicken extra
+                            $1.50</label>
+                        <label><input type="checkbox" name="Olives " value="male" data-theme="a">Olives extra
+                            $.50</label>
+                        <label><input type="checkbox" name="Mushrooms " value="male" data-theme="a">Mushrooms extra $.50</label>
+                        <label><input type="checkbox" name="Pineapple " value="female" data-theme="a">Pineapple extra
+                            $.50</label>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div data-role="collapsible">
+                <h3>Pizza Crusts</h3>
+
+                <form data-role="controlgroup" data-type="horizontal">
+                    <label><input type="radio" name="Peppers " value="Thin " data-theme="a">Thin extra $.50</label>
+                    <label><input type="radio" name="Peppers " value="Thick" data-theme="a">Thick extra $1.50</label>
+                    <label><input type="radio" name="Peppers " value="Stuffed" data-theme="a">Stuffed extra
+                        $2.00</label>
+                </form>
+            </div>
+
+            <div data-role="collapsible">
+                <h3>Drinks</h3>
+
+                <form data-role="controlgroup">
+                    <label><input type="checkbox" name="Mountain Dew " value="Mountain Dew" data-theme="a">Mountain Dew</label>
+                    <label><input type="checkbox" name="Pepsi " value="Pepsi" data-theme="a">Pepsi</label>
+                    <label><input type="checkbox" name="Coke " value="Stuffed" data-theme="a">Coke</label>
+                    <label><input type="checkbox" name="Dr.Pepper " value="Dr.Pepper" data-theme="a">Dr.Pepper</label>
+                    <label><input type="checkbox" name="Root Beer " value="Root Beer" data-theme="a">Root Beer</label>
+                    <label><input type="checkbox" name="Diet Coke " value="Diet Coke" data-theme="a">Diet Coke</label>
+                </form>
+            </div>
+            <div>
+                <button id="addOrder">Add My Order</button>
+            </div>
+
+        </ul>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        Copyright Erick Hernandez
+    </div>
+</div>
+
+<div data-role="page" id="thirdpage">
+    <!--third page-->
+
+    <header><img src=""></header>
+    <div data-role="header" data-id="navbar" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#homepage">Contact Us</a></li>
+                <li><a href="#secondpage">Menu</a></li>
+                <li><a href="#thirdpage" class="ui-btn-active ui-state-persist">Order</a></li>
+                <li><a href="#about_us">About Us</a></li>
+                <li><a href="#map">Map</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="content">
+        <div data-product="2120" class="product">
+            <span data-name="Regular Pizza">Regular Pizza</span>
+            <span data-price="9.99">$9.99</span><br/>
+            <span class="description">10" Regular Pizza</span>
+        </div>
+
+        <div data-product="2121" class="product">
+            <span data-name="Regular Pizza">Regular Pizza</span>
+            <span data-price="11.99">$11.99</span><br/>
+            <span class="description">12" Regular Pizza </span>
+        </div>
+        <div data-product="2122" class="product">
+            <span data-name="Regular Pizza">Regular Pizza</span>
+            <span data-price="13.99">$13.99</span><br/>
+            <span class="description">13" Regular Pizza </span>
+        </div>
+        <div data-product="2123" class="product">
+            <span data-name="RegularPizza">Regular Pizza</span>
+            <span data-price="16.99">$16.99</span><br/>
+            <span class="description">15" Regular Pizza </span>
+        </div>
+        <div id="cartDiv">
+
+        </div>
+
+        <div id="buyNow">
+            <p>
+                <button id="buy">Buy Now</button>
+            </p>
+        </div>
+        <div>
+            <button id="saveOrder">Save Order</button>
+        </div>
+        <div>
+            <button id="loadOrder">Load Order</button>
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        Copyright Erick Hernandez
+    </div>
+</div>
+
+<div data-role="page" id="about_us">
+    <!--about us-->
+
+    <header><img src=""></header>
+    <div data-role="header" data-id="navbar" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#homepage">Contact Us</a></li>
+                <li><a href="#secondpage">Menu</a></li>
+                <li><a href="#thirdpage">Order</a></li>
+                <li><a href="#about_us" class="ui-btn-active ui-state-persist">About Us</a></li>
+                <li><a href="#map">Map</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="content">
+        <h1>Welcome to Erick's Pizzeria</h1>
+
+        <p>
+            We strive to make the best hand tossed pizza's with the freshest ingredients.
+
+        <p>
+
+            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus eget
+            est justo, quis varius eros.
+            Nullam accumsan magna eu sapien bibendum dapibus. Fusce sit amet dui sit amet justo eleifend scelerisque
+            quis sed ligula. Curabitur sagittis,
+            ligula eu facilisis vulputate, tortor leo suscipit lectus, vitae consequat est nulla ac metus. Nulla porta
+            nibh ipsum, in mattis lacus. Aenean
+            at nibh elit, quis accumsan ante. Donec a arcu et magna condimentum faucibus. Quisque pretium aliquam urna,
+            eget pulvinar massa convallis eu.
+            Nunc mattis varius risus iaculis lobortis. Ut tortor lacus, blandit laoreet placerat vel, tincidunt sit amet
+            lorem. Donec bibendum nulla ut
+            risus malesuada bibendum. Ut vel sapien in dui imperdiet elementum in quis ipsum. Aenean tincidunt egestas
+            molestie. Suspendisse bibendum arcu
+            eu lacus congue eget vulputate nulla lobortis.</p>
+
+        <p>
+
+            Nam eu felis justo, in porttitor turpis. Praesent rhoncus, nunc non pharetra iaculis, ligula nisi imperdiet
+            libero, in imperdiet felis diam eu elit.
+            Nunc tincidunt odio vitae ligula posuere euismod hendrerit nisi gravida. Vivamus ac augue lectus. Fusce elit
+            dui, porta semper lobortis quis,
+            convallis eget enim. Nulla facilisi. Nulla mi dolor, fringilla id volutpat lacinia, hendrerit et tellus.
+            Mauris fringilla ipsum et neque rhoncus
+            venenatis. Vestibulum leo nunc, mattis at scelerisque a, adipiscing ut ipsum. Morbi eget magna neque, at
+            egestas mi. Donec tristique metus eget tortor
+            suscipit ullamcorper. Sed arcu urna, auctor id faucibus id, bibendum sodales dolor. Nulla condimentum
+            pharetra lorem, a convallis risus dictum vel.
+
+        <p>
+
+        <p>
+
+            Fusce aliquet vulputate leo non lobortis. Maecenas tincidunt pretium pretium. Ut eu purus aliquet mi
+            tincidunt venenatis a sed sem. Nunc suscipit egestas
+            cursus. Nam tortor felis, tincidunt sit amet malesuada sed, vestibulum nec odio. Praesent auctor, nulla sed
+            pharetra malesuada, magna nisi sollicitudin tortor,
+            a placerat nisi diam non lacus. Quisque tempor adipiscing felis hendrerit lobortis. Fusce mollis neque non
+            orci lacinia euismod hendrerit ligula egestas.
+            Praesent condimentum porttitor venenatis.</p>
+
+        Quisque ut libero vitae turpis mattis placerat ac vitae nibh. Proin eget nisi lacus. Fusce varius pellentesque
+        facilisis. Sed vitae imperdiet elit.
+        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur turpis nisi,
+        luctus id bibendum non, blandit vitae odio. Proin
+        sollicitudin, arcu eu mollis eleifend, eros magna placerat erat, eu venenatis sapien est sit amet mauris.</p>
+
+
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        Copyright Erick Hernandez
+    </div>
+</div>
+
+<div data-role="page" id="map">
+    <!--map page-->
+
+    <header><img src=""></header>
+    <div data-role="header" data-id="navbar" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#homepage">Contact Us</a></li>
+                <li><a href="#secondpage">Menu</a></li>
+                <li><a href="#thirdpage">Order</a></li>
+                <li><a href="#about_us">About Us</a></li>
+                <li><a href="#map" class="ui-btn-active ui-state-persist">Map</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="content">
+        <p>
+            <script>
+                navigator.geolocation.getCurrentPosition(function (pos) {
+                    var lat = pos.coords.latitude;
+                    var lng = pos.coords.longitude;
+                    console.log(lat + " : " + lng);
+                    $("#lat").text(lat);
+                    $("#lng").text(lng);
+
+                    var url = '<a href="http://maps.google.com/maps?daddr=Pizza+Hut,+3304+N.+Nevada,+Spokane,+WA+99207&saddr=' + lat + ',' + lng + '">Your Location</a>';
+                    $("#url").html(url);
+
+                    var map = '<iframe width="360" height="360" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?daddr=Pizza+Hut,+3304+N.+Nevada,+Spokane,+WA+99207&amp;saddr=' + lat + ',' + lng + '&amp;ie=UTF8&amp;t=m&amp;geocode=Fd8j1wIdgccD-Q%3BFfOq1wIduLEA-SGSF4-H7rV7wSl16BgaKBmeVDGSF4-H7rV7wQ&amp;ll=47.670936,-117.294846&amp;spn=0.083228,0.123253&amp;z=12&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?daddr=Pizza+Hut,+3304+N.+Nevada,+Spokane,+WA+99207&amp;saddr=47.6538549,-117.1928306&amp;ie=UTF8&amp;t=m&amp;geocode=Fd8j1wIdgccD-Q%3BFfOq1wIduLEA-SGSF4-H7rV7wSl16BgaKBmeVDGSF4-H7rV7wQ&amp;ll=47.670936,-117.294846&amp;spn=0.083228,0.123253&amp;z=12&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>';
+                    $("#directionMap").html(map);
+                })
+            </script>
+            Latitude: <span id="lat"></span><br/>
+            Longitude: <span id="lng"></span><br/>
+            Url: <span id="url"></span><br/>
+            <span id="directionMap"></span>
+        </p>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        Copyright Erick Hernandez
+    </div>
+</div>
+
+<script>
+    var my_order = [];
+    var cart = [];
+
+
+    function displayCart() {
+        var cartDiv = $('#cartDiv');
+        cartDiv.html("");
+        var grandTotal = 0;
+        for (var item in cart) {
+            var qty = cart[item].qty;
+            var price = cart[item].price;
+            var subtotal = qty * price;
+            grandTotal += subtotal;
+            cartDiv.append('<p>' + qty + ': ' + cart[item].name + ' '
+                    + price.toFixed(2) + '= $' + subtotal.toFixed(2) + '</p>')
+
+        }
+        cartDiv.append('<p>Grand Total: $' + grandTotal.toFixed(2) + '</p>');
+    }
+
+    $(document).ready(function () {
+        $('div[data-product]').each(function () {
+            $(this).append('<button class="btnCart">Add to Cart</button> ')
+        });
+
+        $('#addOrder').on("click", function (event) {
+            var choice = $('input:radio:checked').val();
+            //my_order.push($(this).attr(choice));
+            $('input[type="checkbox"]:checked').each(function () {
+                my_order.push($(this).attr('name'));
+            });
+            $('#cartDiv').append(my_order);
+        });
+
+        $('.btnCart').on("click", function (event) {
+            var pid = $(this).parent().parent().data("product");
+            console.log(pid);
+            if (cart[pid]) {
+                cart[pid].qty += 1;
+            } else {
+                cart[pid] = new Object();
+                cart[pid].qty = 1;
+                cart[pid].pid = pid;
+                cart[pid].name = $(this).parent().siblings("span").data("name");
+                cart[pid].price = $(this).parent().siblings("span").next().data("price");
+            }
+            displayCart();
+        });
+
+        $('#buy').on("click", function (event) {
+            var buyUrl = "";
+            for (var item in cart) {
+                buyUrl += "&pid[]=" + item + "&qty[]=" + cart[item].qty;
+            }
+            $.getJSON('buy.php?' + buyUrl, function (data) {
+                $('<ul/>', {
+                    'class': 'myu-new-list',
+                    html: data
+                }).appendTo('#cartDiv');
+                //$("#cartDiv").append(data);
+            })
+            $("#buy").parent().hide();
+
+            console.log("http://cis217-4.swiftpookie.com/buy.php?" + buyUrl);
+
+        })
+        $('#saveOrder').on("click", function (event) {
+            var cartStr = "[";
+            for (var item in cart) {
+                cartStr += JSON.stringify(cart[item]) + ",";
+            }
+            cartStr = cartStr.slice(0, -1);
+            cartStr += "]";
+            console.log(cartStr);
+            localStorage['cart'] = cartStr;
+        })
+
+        $('#loadOrder').on("click", function () {
+            cart = [];
+            var obj = JSON.parse(localStorage['cart']);
+            for (item in obj) {
+                pid = obj[item].pid;
+                cart[ pid ] = obj[item];
+            }
+            displayCart();
+        })
+    })
+</script>
+
+</body>
+</html>
